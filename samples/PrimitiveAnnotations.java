@@ -20,15 +20,15 @@ import org.jspecify.nullness.Nullable;
 @NullMarked
 class PrimitiveAnnotations {
   void foo(
-      // jspecify_nullness_intrinsically_not_nullable
+      // test:irrelevant_annotation
       @Nullable int x1,
-      // jspecify_nullness_intrinsically_not_nullable
+      // test:irrelevant_annotation
       @Nullable int[] x2,
       int x3,
       int[] x4,
       int @Nullable [] x5,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // test:irrelevant_annotation
       Lib<@Nullable int[]> x6,
       Lib<int @Nullable []> x7) {}
 

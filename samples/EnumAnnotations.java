@@ -20,10 +20,10 @@ import org.jspecify.nullness.NullnessUnspecified;
 
 @NullMarked
 enum EnumAnnotations {
-  // jspecify_nullness_intrinsically_not_nullable
+  // test:irrelevant_annotation
   @Nullable FOO,
 
-  // jspecify_nullness_intrinsically_not_nullable
+  // test:irrelevant_annotation
   @NullnessUnspecified BAR,
 
   BAZ;

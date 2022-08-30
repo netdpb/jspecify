@@ -26,21 +26,21 @@ abstract class NotNullMarkedAnnotatedInnerOfParameterized<T> {
   void foo(
       @Nullable Nested x4,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // test:irrelevant_annotation
       @Nullable NotNullMarkedAnnotatedInnerOfParameterized<?>.Nested x5,
       NotNullMarkedAnnotatedInnerOfParameterized<?>.@Nullable Nested x6,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // test:irrelevant_annotation
       @Nullable NotNullMarkedAnnotatedInnerOfParameterized<?>.Nested.DoublyNested x7,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // test:irrelevant_annotation
       NotNullMarkedAnnotatedInnerOfParameterized<?>.@Nullable Nested.DoublyNested x8,
       NotNullMarkedAnnotatedInnerOfParameterized<?>.Nested.@Nullable DoublyNested x9,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // test:irrelevant_annotation
       Lib<@Nullable NotNullMarkedAnnotatedInnerOfParameterized<?>.Nested.DoublyNested> l1,
 
-      // jspecify_nullness_intrinsically_not_nullable
+      // test:irrelevant_annotation
       Lib<NotNullMarkedAnnotatedInnerOfParameterized<?>.@Nullable Nested.DoublyNested> l2,
       Lib<NotNullMarkedAnnotatedInnerOfParameterized<?>.Nested.DoublyNested> l3) {}
 
@@ -48,6 +48,6 @@ abstract class NotNullMarkedAnnotatedInnerOfParameterized<T> {
     return n.new DoublyNested();
   }
 
-  // jspecify_nullness_intrinsically_not_nullable
+  // test:irrelevant_annotation
   abstract @Nullable NotNullMarkedAnnotatedInnerOfParameterized<?>.Nested returnType();
 }
