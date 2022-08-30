@@ -32,22 +32,22 @@ abstract class UnrecognizedLocationsMisc {
 
   void foo() throws Exception {
     try {
-      // jspecify_unrecognized_location
+      // test:irrelevant_annotation
       @Nullable Object o;
 
       @Nullable Object[] a0;
 
-      // jspecify_unrecognized_location
+      // test:irrelevant_annotation
       Object @Nullable [] a1;
 
-      // jspecify_unrecognized_location
+      // test:irrelevant_annotation
       @Nullable Object @Nullable [] a2;
 
-      // jspecify_unrecognized_location
+      // test:irrelevant_annotation
     } catch (@Nullable Exception e) {
     }
 
-    // jspecify_unrecognized_location
+    // test:irrelevant_annotation
     try (@Nullable AutoCloseable a = get()) {}
   }
 

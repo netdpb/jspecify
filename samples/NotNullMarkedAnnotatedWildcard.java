@@ -20,18 +20,18 @@ class NotNullMarkedAnnotatedWildcard {
   interface Lib<T extends @Nullable Object> {}
 
   void foo(
-      // jspecify_unrecognized_location
+      // test:irrelevant_annotation
       Lib<@Nullable ?> x1,
 
-      // jspecify_unrecognized_location
+      // test:irrelevant_annotation
       Lib<@Nullable ? extends Object> x2,
 
-      // jspecify_unrecognized_location
+      // test:irrelevant_annotation
       Lib<@Nullable ? super Object> x3,
 
-      // jspecify_unrecognized_location
+      // test:irrelevant_annotation
       Lib<@Nullable ? extends @Nullable Object> x4,
 
-      // jspecify_unrecognized_location
+      // test:irrelevant_annotation
       Lib<@Nullable ? super @Nullable Object> x5) {}
 }

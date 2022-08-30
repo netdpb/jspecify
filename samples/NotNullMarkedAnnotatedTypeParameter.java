@@ -17,12 +17,12 @@
 import org.jspecify.nullness.Nullable;
 
 class NotNullMarkedAnnotatedTypeParameter {
-  // jspecify_unrecognized_location
+  // test:irrelevant_annotation
   interface Lib1<@Nullable T> {}
 
-  // jspecify_unrecognized_location
+  // test:irrelevant_annotation
   interface Lib2<@Nullable T extends Object> {}
 
-  // jspecify_unrecognized_location
+  // test:irrelevant_annotation
   interface Lib3<@Nullable T extends @Nullable Object> {}
 }

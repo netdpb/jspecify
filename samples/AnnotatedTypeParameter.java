@@ -19,12 +19,13 @@ import org.jspecify.nullness.Nullable;
 
 @NullMarked
 class AnnotatedTypeParameter {
-  // jspecify_unrecognized_location
+  // test:irrelevant_annotation
   interface Lib1<@Nullable T> {}
 
-  // jspecify_unrecognized_location
+  // test:irrelevant_annotation
   interface Lib2<@Nullable T extends Object> {}
 
-  // jspecify_unrecognized_location
-  interface Lib3<@Nullable T extends @Nullable Object> {}
+  // test:irrelevant_annotation
+  interface Lib3<@Nullable T
+      extends @Nullable Object> {}
 }

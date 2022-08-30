@@ -20,12 +20,13 @@ import org.jspecify.nullness.NullnessUnspecified;
 
 @NullMarked
 class AnnotatedTypeParameterUnspec {
-  // jspecify_unrecognized_location
+  // test:irrelevant_annotation
   interface Lib1<@NullnessUnspecified T> {}
 
-  // jspecify_unrecognized_location
+  // test:irrelevant_annotation
   interface Lib2<@NullnessUnspecified T extends Object> {}
 
-  // jspecify_unrecognized_location
-  interface Lib3<@NullnessUnspecified T extends @Nullable Object> {}
+  // test:irrelevant_annotation
+  interface Lib3<@NullnessUnspecified T
+      extends @Nullable Object> {}
 }
