@@ -32,7 +32,10 @@ abstract class ArraySameType {
     useArray(l);
     // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
     useArrayOfUnspec(l);
-    // jspecify_nullness_mismatch jspecify_but_expect_nothing
+
+    // test:parameter-type:useArrayOfUnionNulll#l=Lib!<Object?[]!>
+    // test:argument-type:useArrayOfUnionNull#l=Lib!<Object![]!>
+    // test:incompatible-argument:useArrayOfUnionNull#l
     useArrayOfUnionNull(l);
   }
 
@@ -46,7 +49,9 @@ abstract class ArraySameType {
   }
 
   void clientUnionNull(Lib<@Nullable Object[]> l) {
-    // jspecify_nullness_mismatch jspecify_but_expect_nothing
+    // test:parameter-type:useArray#l=Lib!<Object![]!>
+    // test:argument-type:useArray#l=Lib!<Object?[]!>
+    // test:incompatible-argument:useArray#l
     useArray(l);
     // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
     useArrayOfUnspec(l);
