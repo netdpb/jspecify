@@ -68,7 +68,7 @@ class CaptureConvertedToOther {
   }
 
   Lib x11(NullableBounded<? extends @Nullable Lib> x) {
-    // jspecify_nullness_mismatch
+    // test:cannot-convert:?-extends-Lib? to Lib!
     return x.get();
   }
 

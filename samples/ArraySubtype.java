@@ -41,9 +41,7 @@ abstract class ArraySubtype {
   }
 
   void clientUnionNull(@Nullable Object[] l) {
-    // test:parameter-type:useArray#l=Object![]!
-    // test:argument-type:useArray#l=Object?[]!
-    // test:incompatible-argument:useArray#l
+    // test:cannot-convert:Object?[]! to Object![]!
     useArray(l);
 
     // jspecify_nullness_not_enough_information

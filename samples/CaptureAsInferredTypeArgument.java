@@ -48,9 +48,9 @@ interface CaptureAsInferredTypeArgument {
   }
 
   default void implicitlyUnionNullBounded(Lib<?> l) {
-    // jspecify_nullness_mismatch
+    // test:cannot-convert:Lib!<?> to Lib!<T>
     useImplicitlyObjectBounded(l);
-    // jspecify_nullness_mismatch
+    // test:cannot-convert:Lib!<?> to Lib!<T>
     useExplicitlyObjectBounded(l);
     // jspecify_nullness_not_enough_information
     useUnspecBounded(l);
@@ -58,9 +58,9 @@ interface CaptureAsInferredTypeArgument {
   }
 
   default void explicitlyUnionNullBounded(Lib<? extends @Nullable Object> l) {
-    // jspecify_nullness_mismatch
+    // test:cannot-convert:Lib!<?-extends-Object?> to Lib!<T>
     useImplicitlyObjectBounded(l);
-    // jspecify_nullness_mismatch
+    // test:cannot-convert:Lib!<?-extends-Object?> to Lib!<T>
     useExplicitlyObjectBounded(l);
     // jspecify_nullness_not_enough_information
     useUnspecBounded(l);
