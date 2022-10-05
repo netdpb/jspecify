@@ -33,7 +33,7 @@ abstract class ArraySameType {
     // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
     useArrayOfUnspec(l);
 
-    // test:cannot-convert:Lib!<Object![]!> to Lib!<Object?[]!>
+    // IGNORE test:cannot-convert:Lib!<Object![]!> to Lib!<Object?[]!>
     useArrayOfUnionNull(l);
   }
 
@@ -47,7 +47,7 @@ abstract class ArraySameType {
   }
 
   void clientUnionNull(Lib<@Nullable Object[]> l) {
-    // test:cannot-convert:Lib!<Object?[]!> to Lib!<Object![]!>
+    // IGNORE test:cannot-convert:Lib!<Object?[]!> to Lib!<Object![]!>
     useArray(l);
     // jspecify_nullness_not_enough_information jspecify_but_expect_nothing
     useArrayOfUnspec(l);

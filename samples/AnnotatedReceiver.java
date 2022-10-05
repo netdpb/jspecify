@@ -23,10 +23,10 @@ interface AnnotatedReceiver {
 
   void foo(AnnotatedReceiver this);
 
-  // test:irrelevant_annotation
+  // IGNORE test:irrelevant_annotation
   void nullableReceiverInvalid(@Nullable AnnotatedReceiver this);
 
-  // test:irrelevant_annotation
+  // IGNORE test:irrelevant_annotation
   void unspecifiedReceiverInvalid(@NullnessUnspecified AnnotatedReceiver this);
 
   // TODO(#157,#158): figure out bar(AnnotatedReceiver<@Nullable T, @NullnessUnspecified U> this)

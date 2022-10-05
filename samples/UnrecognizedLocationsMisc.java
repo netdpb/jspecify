@@ -22,11 +22,11 @@ abstract class UnrecognizedLocationsMisc {
   interface Super {}
 
   static class Sub
-      // test:irrelevant_annotation
+      // IGNORE test:irrelevant_annotation
       extends @Nullable Object
-      // test:irrelevant_annotation
+      // IGNORE test:irrelevant_annotation
       implements @Nullable Super {
-    // test:irrelevant_annotation
+    // IGNORE test:irrelevant_annotation
     @Nullable Sub() {}
   }
 
