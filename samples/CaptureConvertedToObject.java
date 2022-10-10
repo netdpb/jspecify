@@ -68,7 +68,7 @@ class CaptureConvertedToObject {
   }
 
   Object x11(NullableBounded<? extends @Nullable Lib> x) {
-    // test:cannot-convert:?-extends-Lib? to Object!
+    // test:cannot-convert:capture of ? extends Lib? to Object!
     return x.get();
   }
 

@@ -24,12 +24,12 @@ class BoundedTypeVariableReturn {
   }
 
   Foo use(NullableFooSupplier<?> supplier) {
-    // test:cannot-convert:?-extends-Foo? to Foo!
+    // test:cannot-convert:capture of ? extends Foo? to Foo!
     return supplier.get();
   }
 
   Lib<? extends Foo> use(LibOfNullableFooSupplier<?> supplier) {
-    // test:cannot-convert:Lib!<?-extends-Foo?> to Lib!<?-exends-Foo!>
+    // test:cannot-convert:Lib!<capture of ? extends Foo?> to Lib!<? extends Foo!>
     return supplier.get();
   }
 
